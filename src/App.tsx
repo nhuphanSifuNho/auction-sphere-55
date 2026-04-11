@@ -17,6 +17,8 @@ import ActivityLog from "./pages/ActivityLog";
 import SellerStats from "./pages/SellerStats";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
+import Categories from "./pages/Categories";
+import TopUp from "./pages/TopUp";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminAuctions from "./pages/admin/AdminAuctions";
@@ -48,6 +50,8 @@ const App = () => (
               <Route path="/seller-stats" element={<SellerStats />} />
               <Route path="/notifications" element={<Notifications />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/topup" element={<TopUp />} />
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/users" element={<AdminUsers />} />
               <Route path="/admin/auctions" element={<AdminAuctions />} />
