@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
+    --background: 216 14% 95%;
     --foreground: 220 20% 10%;
     --card: 0 0% 100%;
     --card-foreground: 220 20% 10%;
@@ -26,28 +26,36 @@
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
     --ring: 239 84% 67%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 9% 46%;
+    --radius: 0.4375rem;
+
+    --sidebar-background: 235 18% 15%;
+    --sidebar-foreground: 230 10% 66%;
     --sidebar-primary: 239 84% 67%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 220 20% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-accent: 239 84% 67%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 235 14% 22%;
     --sidebar-ring: 239 84% 67%;
+    --sidebar-muted: 235 12% 30%;
 
-    --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-dropdown: 0 4px 16px rgba(0,0,0,0.12);
-    --shadow-modal: 0 20px 60px rgba(0,0,0,0.15);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-dropdown: 0 8px 24px rgba(0,0,0,0.12);
+    --shadow-modal: 0 24px 64px rgba(0,0,0,0.18);
+
+    --topbar-height: 52px;
+    --sidebar-width: 240px;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+  }
+  html {
+    min-width: 1280px;
   }
   body {
     @apply bg-background text-foreground font-sans;
