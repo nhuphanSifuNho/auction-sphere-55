@@ -17,6 +17,8 @@ import ActivityLog from "./pages/ActivityLog";
 import SellerStats from "./pages/SellerStats";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
+import Categories from "./pages/Categories";
+import TopUp from "./pages/TopUp";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminAuctions from "./pages/admin/AdminAuctions";
