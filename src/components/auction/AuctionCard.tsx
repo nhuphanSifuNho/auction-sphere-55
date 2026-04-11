@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useApp } from "@/contexts/AppContext";
 import { useCountdown } from "@/hooks/useCountdown";
-import { getItem, getUser, getCategory, type Auction } from "@/data/mockData";
+import { getItem, getUser, getCategory } from "@/data/mockData";
+import type { Auction } from "@/types";
 import { cn } from "@/lib/utils";
 import type { AuctionStatus, ItemCondition } from "@/types";
 
