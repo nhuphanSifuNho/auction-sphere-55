@@ -1,4 +1,5 @@
 import { StatCard } from "@/components/shared/StatCard";
+import { getItem } from "@/data/mockData";
 import { mockAuctions, mockUsers, mockBids, mockPayments, mockTopUpRequests, mockActivityLog, mockCategories } from "@/data/mockData";
 import { Users, Gavel, TrendingUp, DollarSign, Inbox, CreditCard, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +14,7 @@ const AdminDashboard = () => {
     name: cat.name,
     revenue: mockPayments.reduce((sum, p) => {
       const auction = mockAuctions.find(a => a.id === p.auctionId);
-      const item = auction ? require("@/data/mockData").getItem(auction.itemId) : null;
+      const item = auction ? getItem(auction.itemId) : null;
       return item?.categoryId === cat.id ? sum + p.totalAmount : sum;
     }, 0),
   }));
