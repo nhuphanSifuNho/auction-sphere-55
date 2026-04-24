@@ -3,7 +3,7 @@ import { getItem } from "@/data/mockData";
 import { mockAuctions, mockUsers, mockBids, mockPayments, mockTopUpRequests, mockActivityLog, mockCategories } from "@/data/mockData";
 import { Users, Gavel, TrendingUp, DollarSign, Inbox, CreditCard, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const AdminDashboard = () => {
   const pendingTopUps = mockTopUpRequests.filter(t => t.status === "PENDING").length;
@@ -58,15 +58,22 @@ const AdminDashboard = () => {
 
         <div className="bg-card rounded-xl border p-5 shadow-card">
           <h2 className="text-lg font-semibold mb-4">Revenue by Category</h2>
-          <ResponsiveContainer width="100%" height={240}>
-            <BarChart data={categoryRevenue}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-              <XAxis dataKey="name" tick={{ fontSize: 12 }} stroke="hsl(var(--muted-foreground))" />
-              <YAxis tick={{ fontSize: 12 }} stroke="hsl(var(--muted-foreground))" />
-              <Tooltip />
-              <Bar dataKey="revenue" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Category</TableHead>
+                <TableHead className="text-right">Revenue</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {categoryRevenue.map(c => (
+                <TableRow key={c.name}>
+                  <TableCell>{c.name}</TableCell>
+                  <TableCell className="text-right font-medium">${c.revenue.toFixed(2)}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
       </div>
     </div>
