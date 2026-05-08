@@ -21,13 +21,11 @@ const AdminDashboard = () => {
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 text-primary-foreground">
-        <div className="flex items-center gap-3">
-          <Shield className="h-8 w-8" />
-          <div>
-            <h1 className="text-2xl font-bold">Admin Control Panel</h1>
-            <p className="text-sm opacity-80">Manage auctions, users, and system settings</p>
-          </div>
+      <div className="flex items-center gap-3 bg-card border rounded-lg p-5">
+        <Shield className="h-8 w-8 text-primary" />
+        <div>
+          <h1 className="text-2xl font-bold text-foreground">Admin Control Panel</h1>
+          <p className="text-sm text-muted-foreground">Manage auctions, users, and system settings</p>
         </div>
       </div>
 
