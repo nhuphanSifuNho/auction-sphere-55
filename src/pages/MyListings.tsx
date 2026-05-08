@@ -65,7 +65,12 @@ const MyListings = () => {
           <tbody>
             {myListings.map(({ auction, item }) => (
               <tr key={auction.id} className="border-b last:border-0 hover:bg-muted/50">
-                <td className="p-4"><Link to={`/auction/${auction.id}`} className="font-medium hover:text-primary">{item.title}</Link></td>
+                <td className="p-4">
+                  <Link to={`/auction/${auction.id}`} className="flex items-center gap-3 hover:text-primary">
+                    <img src={item.images[0]} alt={item.title} className="h-10 w-10 rounded object-cover border bg-muted" />
+                    <span className="font-medium">{item.title}</span>
+                  </Link>
+                </td>
                 <td className="p-4 text-muted-foreground">{mockCategories.find(c => c.id === item.categoryId)?.name}</td>
                 <td className="p-4">${item.startingPrice.toFixed(2)}</td>
                 <td className="p-4 font-semibold">${auction.currentHighestBid.toFixed(2)}</td>

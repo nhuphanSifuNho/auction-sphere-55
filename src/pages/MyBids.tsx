@@ -71,8 +71,9 @@ const MyBids = () => {
               {userBids.map(({ bid, auction, item, status }) => (
                 <tr key={bid.id} className="border-b last:border-0 hover:bg-muted/50">
                   <td className="p-4">
-                    <Link to={`/auction/${auction?.id}`} className="font-medium text-foreground hover:text-primary">
-                      {item?.title || "Unknown"}
+                    <Link to={`/auction/${auction?.id}`} className="flex items-center gap-3 hover:text-primary">
+                      <img src={item?.images[0]} alt={item?.title} className="h-10 w-10 rounded object-cover border bg-muted" />
+                      <span className="font-medium text-foreground">{item?.title || "Unknown"}</span>
                     </Link>
                   </td>
                   <td className="p-4 font-semibold">${bid.amount.toFixed(2)}</td>
