@@ -31,8 +31,11 @@ const Watchlist = () => {
                 const item = getItem(a.itemId);
                 return (
                   <TableRow key={a.id}>
-                    <TableCell className="font-medium">
-                      <Link to={`/auction/${a.id}`} className="hover:text-primary">{item?.title}</Link>
+                    <TableCell>
+                      <Link to={`/auction/${a.id}`} className="flex items-center gap-3 hover:text-primary">
+                        <img src={item?.images[0]} alt={item?.title} className="h-10 w-10 rounded object-cover border bg-muted" />
+                        <span className="font-medium">{item?.title}</span>
+                      </Link>
                     </TableCell>
                     <TableCell><Badge variant="secondary">{a.status}</Badge></TableCell>
                     <TableCell className="text-right font-semibold">${a.currentHighestBid.toFixed(2)}</TableCell>
