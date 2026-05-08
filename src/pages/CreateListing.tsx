@@ -2,7 +2,7 @@ import { useState } from "react";
 import { mockCategories } from "@/data/mockData";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Camera, Upload, X } from "lucide-react";
+import { Upload } from "lucide-react";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -126,11 +126,8 @@ const CreateListing = () => {
 
         {/* Preview */}
         <div className="lg:col-span-2">
-          <div className="sticky top-20 bg-card rounded-xl border p-5 shadow-card space-y-3">
+          <div className="sticky top-20 bg-card rounded-lg border p-5 space-y-3">
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Preview</p>
-            <div className="h-32 bg-gradient-to-br from-muted to-secondary rounded-lg flex items-center justify-center">
-              <Camera className="h-8 w-8 text-muted-foreground/30" />
-            </div>
             {category && <Badge variant="secondary" className="text-xs">{mockCategories.find(c => c.id === category)?.name}</Badge>}
             <h3 className="text-sm font-semibold">{title || "Item Title"}</h3>
             <p className="text-xl font-bold text-primary">${startingPrice || "0.00"}</p>
