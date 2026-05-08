@@ -7,7 +7,7 @@ export const AppLayout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
         <AppSidebar />
-        <main className="flex-1 overflow-y-auto p-7 animate-fade-in">
+        <main className="flex-1 overflow-y-auto p-7">
           {children}
         </main>
       </div>

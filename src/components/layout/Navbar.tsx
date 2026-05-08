@@ -66,7 +66,7 @@ export const Navbar = () => {
             <Button variant="ghost" size="icon" className="relative h-9 w-9">
               <Bell className="h-[18px] w-[18px]" />
               {unreadCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-destructive text-destructive-foreground text-[10px] flex items-center justify-center font-medium animate-pulse">
+                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-destructive text-destructive-foreground text-[10px] flex items-center justify-center font-medium">
                   {unreadCount}
                 </span>
               )}
