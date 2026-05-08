@@ -55,9 +55,9 @@ const Profile = () => {
 
           {activeTab === "Balance & Payments" && (
             <div className="space-y-4">
-              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 text-primary-foreground">
-                <p className="text-sm opacity-80">Current Balance</p>
-                <p className="text-3xl font-bold mt-1">${currentUser.balance.toLocaleString("en-US", { minimumFractionDigits: 2 })}</p>
+              <div className="bg-card border rounded-lg p-5">
+                <p className="text-sm text-muted-foreground">Current Balance</p>
+                <p className="text-3xl font-bold mt-1 text-foreground">${currentUser.balance.toLocaleString("en-US", { minimumFractionDigits: 2 })}</p>
               </div>
               <Button onClick={() => toast.success("Top-up request submitted")}>Request Top-up</Button>
             </div>

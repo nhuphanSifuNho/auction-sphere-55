@@ -31,12 +31,12 @@ const TopUp = () => {
     <div className="max-w-lg mx-auto space-y-6">
       <h1 className="text-2xl font-bold text-foreground">Top-up Balance</h1>
 
-      <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 text-primary-foreground">
+      <div className="bg-card border rounded-lg p-5">
         <div className="flex items-center gap-3 mb-2">
-          <Wallet className="h-6 w-6" />
-          <span className="text-sm opacity-80">Current Balance</span>
+          <Wallet className="h-5 w-5 text-primary" />
+          <span className="text-sm text-muted-foreground">Current Balance</span>
         </div>
-        <p className="text-3xl font-bold">
+        <p className="text-3xl font-bold text-foreground">
           ${currentUser.balance.toLocaleString("en-US", { minimumFractionDigits: 2 })}
         </p>
       </div>
