@@ -60,6 +60,9 @@ const AuctionDetail = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
         <div className="lg:col-span-3 space-y-6">
+          <div className="bg-card border rounded-lg overflow-hidden">
+            <img src={item.images[0]} alt={item.title} className="w-full h-80 object-cover bg-muted" />
+          </div>
           <div className="bg-card border rounded-lg p-5 space-y-3">
             {category && <p className="text-xs text-muted-foreground">{category.name}</p>}
             <h1 className="text-2xl font-bold text-foreground">{item.title}</h1>
