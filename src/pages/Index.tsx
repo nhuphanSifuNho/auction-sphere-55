@@ -24,8 +24,11 @@ const AuctionRow = ({ auction }: { auction: Auction }) => {
   if (!item) return null;
   return (
     <TableRow>
-      <TableCell className="font-medium">
-        <Link to={`/auction/${auction.id}`} className="hover:text-primary">{item.title}</Link>
+      <TableCell>
+        <Link to={`/auction/${auction.id}`} className="flex items-center gap-3 hover:text-primary">
+          <img src={item.images[0]} alt={item.title} className="h-12 w-12 rounded object-cover border bg-muted" />
+          <span className="font-medium">{item.title}</span>
+        </Link>
       </TableCell>
       <TableCell>{category?.name ?? "—"}</TableCell>
       <TableCell><Badge variant="secondary">{item.condition}</Badge></TableCell>
